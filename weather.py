@@ -23,3 +23,18 @@ if len(playlist) == 0:
     print("No songs selected")
     sys.exit(1)
 random.shuffle(playlist)
+
+random.shuffle(playlist)
+
+# Weather predictions for cities kept in weather_dict
+weather_dict = {}
+code_set = {200, 201, 202, 210, 211, 212, 221, 230, 231, 232, 800, 802, 803, 804}
+
+def forecast(city):
+    """Takes in a city and returns json response of weather data"""
+    print("In forecast")
+    response = requests.get(
+        "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" +
+        api_key
+    )
+    return response.json()

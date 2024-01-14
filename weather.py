@@ -38,3 +38,19 @@ def forecast(city):
         api_key
     )
     return response.json()
+
+# will only print if the weather id is in the set.
+# Take the weather data in the weather dictionary and look for weather codes in the 200 range
+def getCode(weather_dict):
+    """Given the cities and predictions in weather_dict, determine if thunderstorms are expected- returns boolean
+    value for music"""
+    for value in weather_dict.values():
+        for key, v in value.items():
+            if (key == 'weather'):
+                for k in v:
+                    #if the id is in the set of codes, set music to true, otherwise false
+                    if ('id' in k.keys()):
+                        if (k['id'] in code_set):
+                            return 1
+                        else:
+                            return 0

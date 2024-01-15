@@ -54,3 +54,29 @@ def getCode(weather_dict):
                             return 1
                         else:
                             return 0
+
+# Loop through cities in the cities variable, getting the forecast, saving
+# each into the weather_dict dictionary, check weather periodically
+def checkWeather(weather_dict, cities):
+    """Given cities to check and the weather info, play music if storming,
+    periodically check the weather for those cities"""
+    while True:
+        # Get forcast for each city
+        for city in cities:
+            weather_dict[city] = forecast(city)
+        # if getCode returns 1, music is true, so play the music playlist
+        music = getCode(weather_dict)
+        if music == 1:
+            for song in playlist:
+                vlc_instance = vlc.Instance()
+                tag = TinyTag.get(song)
+                player = vlc_instance.media_player_new()
+                media = vlc_instance.media_new(song)
+                player.set_media(media)
+                player.play()
+                print(tag.duration)
+                time.sleep(tag.duration)
+        else:
+            time.sleep(10)
+
+checkWeather(weather_dict, cities)

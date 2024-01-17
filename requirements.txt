@@ -1,4 +1,4 @@
 requests
 glob2
-vlc
+python-vlc
 tinytag

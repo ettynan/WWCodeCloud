@@ -1,4 +1,4 @@
 requests
-glob==0.7
+glob
 vlc
 tinytag

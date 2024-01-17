@@ -1,4 +1,3 @@
-json
 requests
 time
 glob==0.7

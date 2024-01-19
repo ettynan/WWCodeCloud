@@ -1,9 +1,7 @@
-import json
 import requests
 import credentials
 import time
 import glob
-import random
 import vlc
 from tinytag import TinyTag
 

@@ -12,5 +12,12 @@
 | tinytag          | 1.10.1 |
 | ruff             |
 
-### 2. Deploy some project to a cloud service
-#### a. Incorporate Terraform
+### 2. Deploy this weather checking project to a cloud service
+
+Summary of project to include:
+- [ ] Deploy to AWS or other cloud service
+    - [x] Write small program in Python
+    - [ ] Test Python program
+    - [ ] Have github actions for project
+    - [ ] Include Terraform for deployment
+- [ ] More detailed README and documentation

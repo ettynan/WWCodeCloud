@@ -31,7 +31,8 @@ def forecast(city):
 
 def is_thunderstorm(weather_dict):
     """Determine if thunderstorms are expected, return boolean value for music"""
-    return any('weather' in v and any('id' in k and k['id'] in code_set for k in v['weather']) for v in weather_dict.values())
+    return any('weather' in v and any('id' in k and k['id'] in code_set for k\
+        in v['weather']) for v in weather_dict.values())
 
 def play_music(song):
     """Play the given song using VLC"""

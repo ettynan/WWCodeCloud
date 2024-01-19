@@ -2,3 +2,4 @@ requests
 glob2
 python-vlc
 tinytag
+ruff

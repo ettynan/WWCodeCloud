@@ -94,3 +94,5 @@ activate/*
 
 # Misc
 *.DS_Store
+credentials.py
+songs/*

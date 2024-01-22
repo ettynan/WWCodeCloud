@@ -1,4 +1,3 @@
-import requests
 import credentials
 import time
 import glob

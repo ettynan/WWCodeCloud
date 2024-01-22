@@ -21,3 +21,4 @@ Summary of project to include:
     - [ ] Have github actions for project
     - [ ] Include Terraform for deployment
 - [ ] More detailed README and documentation
+- [x] Visual representation of folder structure ![folder structure](structure.png)

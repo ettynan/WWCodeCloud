@@ -96,3 +96,4 @@ activate/*
 *.DS_Store
 credentials.py
 songs/*
+node_modules/

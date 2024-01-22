@@ -1,16 +1,12 @@
 # api.py
 
 import requests
-import credentials
 from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-# Replace 'your_api_key' with your actual OpenWeatherMap API key
-api_key = credentials.api_key
-
 @app.route('/current_weather/<city>', methods=['GET'])
-def get_current_weather(city):
+def get_current_weather(city, api_key):
     '''Get current weather data for the specified city.'''
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city},US&APPID={api_key}"
     response = requests.get(url)
